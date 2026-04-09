@@ -13,6 +13,13 @@
         p, li { margin-bottom: 10px; }
         strong { color: #000; }
     </style>
+    <script>
+        // Si el idioma del navegador es ESPAÑOL, lo mandamos al archivo original
+        var userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('es')) {
+            window.location.href = "privacidad-imc-corporal.html";
+        }
+    </script>
 </head>
 <body>
     <div class="card">
