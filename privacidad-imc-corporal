@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLÍTICAS DE PRIVACIDAD - IMC - Indice de Masa Corporal</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 30px; color: #333; max-width: 900px; margin: auto; background-color: #f9f9f9; }
+        .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #333; margin-top: 25px; font-size: 1.3em; }
+        .info-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        p, li { margin-bottom: 10px; }
+        strong { color: #000; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>POLÍTICAS DE PRIVACIDAD</h1>
+        <div class="info-box">
+            <p><strong>App:</strong> IMC - Indice de Masa Corporal</p>
+            <p><strong>Fecha de creación:</strong> 30 de mayo, 2025</p>
+            <p><strong>Creador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
+            <p><strong>Contacto:</strong> simplified.maed@gmail.com</p>
+            <p><strong>web:</strong>sma-apps.netlify.app</p>
+</div>
+
+        <h2>1. Prácticas de seguridad</h2>
+        <p>Todos los datos recopilados por esta aplicación se cifran durante su uso.</p>
+
+        <h2>2. Tipos de datos que recopila esta aplicación</h2>
+        <ul>
+            <li><strong>2.1. Ubicación aproximada:</strong> Se utiliza para fines estadísticos y de marketing.</li>
+            <li><strong>2.2. Registro de errores e información de rendimiento:</strong> Se utilizan para fines estadísticos y de marketing.</li>
+            <li><strong>2.3. Datos del dispositivo:</strong> Se utilizan para fines estadísticos y de marketing.</li>
+            <li><strong>2.4. Datos del usuario:</strong> La aplicación no recopila información personal del usuario.</li>
+        </ul>
+
+        <h2>3. Métodos de procesamiento</h2>
+        <p>El procesamiento de datos como la ubicación aproximada, la información del registro de fallos, el rendimiento y los datos del dispositivo se realiza a través de un tercero con fines estadísticos y de marketing.</p>
+
+        <h2>4. Lugar, Retención y Finalidad</h2>
+        <p>El procesamiento, almacenamiento y tiempo de retención de los datos recopilados se realiza a través de un tercero con fines estadísticos y de marketing.</p>
+
+        <h2>5. Redes Sociales</h2>
+        <p>Esta aplicación no interactúa con las redes sociales vinculadas al usuario.</p>
+
+        <hr>
+
+        <h1>Términos y Condiciones</h1>
+        <ul>
+            <li>Esta aplicación proporciona cálculos del Índice de Masa Corporal (IMC) según las directrices de la Organización Mundial de la Salud (OMS).</li>
+            <li>La información proporcionada es solo para fines informativos y no sustituye el consejo médico profesional.</li>
+            <li>Consulte con un profesional de la salud antes de tomar cualquier decisión relacionada con su salud o peso.</li>
+            <li>El uso de esta aplicación es bajo su propia responsabilidad.</li>
+            <li>Los creadores de esta aplicación no se hacen responsables de ningún daño derivado del uso de esta aplicación.</li>
+        </ul>
+    </div>
+</body>
+</html>
