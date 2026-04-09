@@ -13,7 +13,15 @@
         p, li { margin-bottom: 10px; }
         strong { color: #000; }
     </style>
+      <script>
+    var userLang = navigator.language || navigator.userLanguage; 
+    if (!userLang.startsWith('es')) {
+        // Aquí usamos el nombre con la terminación -en
+        window.location.href = "privacidad-imc-corporal-en.html";
+    }
+</script>
 </head>
+  
 <body>
     <div class="card">
         <h1>POLÍTICAS DE PRIVACIDAD</h1>
