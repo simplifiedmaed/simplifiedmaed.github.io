@@ -12,9 +12,9 @@
         .info-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
         p, li { margin-bottom: 10px; }
         strong { color: #000; }
+        hr { border: 0; border-top: 2px solid #eee; margin: 40px 0; }
     </style>
     <script>
-        // Si el idioma del navegador es ESPAÑOL, lo mandamos al archivo original
         var userLang = navigator.language || navigator.userLanguage; 
         if (userLang.startsWith('es')) {
             window.location.href = "privacidad-imc-corporal.html";
@@ -27,40 +27,48 @@
         <div class="info-box">
             <p><strong>App:</strong> BMI - Body Mass Index</p>
             <p><strong>Creation Date:</strong> May 30, 2025</p>
+            <p><strong>Last Updated:</strong> April 11, 2026</p>
             <p><strong>Developer:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
             <p><strong>Contact:</strong> simplified.maed@gmail.com</p>
             <p><strong>Web:</strong> sma-apps.netlify.app</p>
         </div>
 
         <h2>1. Security Practices</h2>
-        <p>All data collected by this application is encrypted during use.</p>
+        <p>All data collected or processed by this application is encrypted using secure protocols (such as HTTPS) during transmission and use. We do not sell or share personal or health information with third parties for purposes other than the operation of integrated advertising.</p>
 
         <h2>2. Types of Data Collected by This Application</h2>
+        <p>In compliance with Google Play policies, we declare the collection and use of the following data:</p>
         <ul>
-            <li><strong>2.1. Approximate location:</strong> Used for statistical and marketing purposes.</li>
-            <li><strong>2.2. Error logs and performance information:</strong> Used for statistical and marketing purposes.</li>
-            <li><strong>2.3. Device data:</strong> Used for statistical and marketing purposes.</li>
-            <li><strong>2.4. User data:</strong> The application does not collect personal user information.</li>
+            <li><strong>2.1. Personal Information:</strong> We collect the user's <strong>name</strong> solely for UI personalization purposes. This data is not shared with third parties.</li>
+            <li><strong>2.2. Health and Fitness Information:</strong> <strong>Weight, height, and pregnancy week</strong> data are collected for the app's core functionality (BMI calculation). This information is processed locally and is not shared.</li>
+            <li><strong>2.3. Approximate Location:</strong> Used exclusively for <strong>advertising or marketing</strong> purposes through third-party providers like Google AdMob.</li>
+            <li><strong>2.4. Performance Information:</strong> We collect <strong>crash logs and diagnostics</strong> anonymously to generate statistics and improve app stability.</li>
+            <li><strong>2.5. Device or Other IDs:</strong> Technical identifiers are collected for <strong>advertising, marketing, and fraud prevention</strong>. These IDs are shared with the Google AdMob SDK.</li>
         </ul>
 
         <h2>3. Processing Methods</h2>
-        <p>Data processing, including approximate location, crash logs, performance, and device data, is conducted through third parties for statistical and marketing purposes.</p>
+        <p>Technical and advertising metadata processing is conducted through third parties (Google SDKs). Health-related calculations are executed locally on the user's device hardware to ensure maximum privacy.</p>
 
-        <h2>4. Location, Retention, and Purpose</h2>
-        <p>Processing, storage, and retention periods for collected data are managed through third parties for statistical and marketing purposes.</p>
+        <h2>4. Data Retention</h2>
+        <p><strong>Local Data:</strong> Calculation history and user profiles are kept indefinitely in the device's local database as long as the application is installed.</p>
+        <p><strong>Third-Party Data:</strong> Analytical and advertising data are retained according to the privacy policies of <strong>Google AdMob</strong> and <strong>Firebase</strong>.</p>
 
-        <h2>5. Social Networks</h2>
-        <p>This application does not interact with social networks linked to the user.</p>
+        <h2>5. Data Deletion and User Rights</h2>
+        <p>Users can manage their information as follows:</p>
+        <ul>
+            <li><strong>Manual Deletion:</strong> Users can delete individual records or the entire history within the app's settings.</li>
+            <li><strong>Full Deletion:</strong> By uninstalling the app or clearing storage in Android settings, all local data is permanently removed.</li>
+            <li><strong>Inquiries:</strong> For any questions, contact <strong>simplified.maed@gmail.com</strong>.</li>
+        </ul>
 
         <hr>
 
         <h1>Terms and Conditions</h1>
         <ul>
             <li>This application provides Body Mass Index (BMI) calculations based on World Health Organization (WHO) guidelines.</li>
-            <li>The information provided is for informational purposes only and does not substitute professional medical advice.</li>
-            <li>Consult with a healthcare professional before making any decisions related to your health or weight.</li>
+            <li>The information provided is <strong>for informational purposes only</strong> and does not substitute professional medical advice.</li>
+            <li>Consult with a healthcare professional before making decisions related to your health or weight.</li>
             <li>Use of this application is at your own risk.</li>
-            <li>The developers of this application are not responsible for any damages resulting from the use of this application.</li>
         </ul>
     </div>
 </body>
