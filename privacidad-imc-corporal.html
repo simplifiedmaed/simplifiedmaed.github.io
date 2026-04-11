@@ -16,7 +16,6 @@
       <script>
     var userLang = navigator.language || navigator.userLanguage; 
     if (!userLang.startsWith('es')) {
-        // Aquí usamos el nombre con la terminación -en
         window.location.href = "privacidad-imc-corporal-en.html";
     }
 </script>
@@ -28,40 +27,49 @@
         <div class="info-box">
             <p><strong>App:</strong> IMC - Indice de Masa Corporal</p>
             <p><strong>Fecha de creación:</strong> 30 de mayo, 2025</p>
+            <p><strong>Última actualización:</strong> 11 de abril, 2026</p>
             <p><strong>Creador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
             <p><strong>Contacto:</strong> simplified.maed@gmail.com</p>
-            <p><strong>web:</strong> sma-apps.netlify.app</p>
-</div>
+            <p><strong>Web:</strong> sma-apps.netlify.app</p>
+        </div>
 
         <h2>1. Prácticas de seguridad</h2>
-        <p>Todos los datos recopilados por esta aplicación se cifran durante su uso.</p>
+        <p>Todos los datos recopilados o procesados por esta aplicación se cifran mediante protocolos seguros (como HTTPS) durante su transmisión y uso.</p>
 
         <h2>2. Tipos de datos que recopila esta aplicación</h2>
         <ul>
-            <li><strong>2.1. Ubicación aproximada:</strong> Se utiliza para fines estadísticos y de marketing.</li>
-            <li><strong>2.2. Registro de errores e información de rendimiento:</strong> Se utilizan para fines estadísticos y de marketing.</li>
-            <li><strong>2.3. Datos del dispositivo:</strong> Se utilizan para fines estadísticos y de marketing.</li>
-            <li><strong>2.4. Datos del usuario:</strong> La aplicación no recopila información personal del usuario.</li>
+            <li><strong>2.1. Ubicación aproximada:</strong> Se utiliza para fines estadísticos y de marketing a través de servicios de terceros (AdMob).</li>
+            <li><strong>2.2. Registro de errores e información de rendimiento:</strong> Datos técnicos para mejorar la estabilidad de la app.</li>
+            <li><strong>2.3. Datos del dispositivo:</strong> Identificadores técnicos para optimización y publicidad.</li>
+            <li><strong>2.4. Datos ingresados por el usuario:</strong> Los datos de salud (peso, estatura, semanas de gestación) se procesan localmente en el dispositivo para realizar los cálculos.</li>
         </ul>
 
         <h2>3. Métodos de procesamiento</h2>
-        <p>El procesamiento de datos como la ubicación aproximada, la información del registro de fallos, el rendimiento y los datos del dispositivo se realiza a través de un tercero con fines estadísticos y de marketing.</p>
+        <p>El procesamiento de metadatos técnicos se realiza a través de terceros (Google SDKs) con fines de análisis y monetización. Los cálculos de IMC se ejecutan de forma local en el hardware del teléfono.</p>
 
-        <h2>4. Lugar, Retención y Finalidad</h2>
-        <p>El procesamiento, almacenamiento y tiempo de retención de los datos recopilados se realiza a través de un tercero con fines estadísticos y de marketing.</p>
+        <h2>4. Retención de datos</h2>
+        <p><strong>Datos locales:</strong> Los registros de cálculos y perfiles creados dentro de la aplicación se almacenan únicamente en la base de datos local del dispositivo del usuario. Estos datos se conservan de forma indefinida mientras la aplicación esté instalada para permitir al usuario llevar un seguimiento de su historial.</p>
+        <p><strong>Datos de terceros:</strong> Los datos analíticos y publicitarios se retienen según las políticas de privacidad de Google AdMob y Firebase.</p>
 
-        <h2>5. Redes Sociales</h2>
-        <p>Esta aplicación no interactúa con las redes sociales vinculadas al usuario.</p>
+        <h2>5. Eliminación de datos y Derechos del usuario</h2>
+        <p>El usuario tiene control total sobre su información y puede solicitar o ejecutar la eliminación de sus datos de la siguiente manera:</p>
+        <ul>
+            <li><strong>Eliminación manual:</strong> El usuario puede borrar registros individuales o el historial completo directamente desde la sección de configuración o historial dentro de la aplicación.</li>
+            <li><strong>Eliminación total:</strong> Al desinstalar la aplicación o "Borrar datos de almacenamiento" desde los ajustes de Android, todos los datos locales se eliminan de forma permanente e irreversible.</li>
+            <li><strong>Solicitudes por correo:</strong> Para cualquier consulta sobre la privacidad o para solicitar la eliminación de datos de soporte técnico, el usuario puede escribir a <strong>simplified.maed@gmail.com</strong>.</li>
+        </ul>
+
+        <h2>6. Redes Sociales</h2>
+        <p>Esta aplicación no interactúa con las redes sociales vinculadas al usuario ni accede a sus credenciales de acceso.</p>
 
         <hr>
 
         <h1>Términos y Condiciones</h1>
         <ul>
-            <li>Esta aplicación proporciona cálculos del Índice de Masa Corporal (IMC) según las directrices de la Organización Mundial de la Salud (OMS).</li>
+            <li>Esta aplicación proporciona cálculos del Índice de Masa Corporal (IMC) según las directrices de la Organización Mundial de la Salud (OMS) y tablas de ganancia de peso gestacional.</li>
             <li>La información proporcionada es solo para fines informativos y no sustituye el consejo médico profesional.</li>
             <li>Consulte con un profesional de la salud antes de tomar cualquier decisión relacionada con su salud o peso.</li>
             <li>El uso de esta aplicación es bajo su propia responsabilidad.</li>
-            <li>Los creadores de esta aplicación no se hacen responsables de ningún daño derivado del uso de esta aplicación.</li>
         </ul>
     </div>
 </body>
