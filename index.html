@@ -9,71 +9,117 @@
         
         header { text-align: center; padding: 40px 0; background: #0056b3; color: white; border-radius: 8px; margin-bottom: 20px; }
         
-        /* --- ESTILO DEL LOGO --- */
-        .logo { 
-            width: 120px;   /* Cambia este valor para ajustar el tamaño */
-            height: auto;   /* Mantiene la proporción original */
-            border-radius: 10px; /* Bordes redondeados (opcional) */
+        .logo-main { 
+            width: 120px; 
+            height: auto; 
+            border-radius: 10px; 
             margin-bottom: 15px;
-            background-color: white; /* Fondo blanco por si el logo es oscuro */
+            background-color: white; 
             padding: 5px;
         }
 
-        .app-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 15px; }
-        .app-title { font-size: 1.5em; font-weight: bold; color: #0056b3; }
-        .links { margin-top: 10px; }
+        /* --- NUEVOS ESTILOS PARA LOGOS DE APPS --- */
+        .app-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+            margin-bottom: 20px; 
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .app-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-title { font-size: 1.4em; font-weight: bold; color: #0056b3; margin-bottom: 5px; }
+        .links { margin-top: 5px; }
         a { color: #007bff; text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; }
+        
         footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #777; }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="sma.png" alt="Logo S.M.A." class="logo">
+    <img src="sma.png" alt="Logo S.M.A." class="logo-main">
     <h1>Simplifiedmaed Developer Support</h1>
     <p>Información legal y soporte de aplicaciones</p>
     <p>Contacto: simplified.maed@gmail.com</p>
 </header>
 
     <div class="app-card">
-        <div class="app-title">BTU A/C Calculator</div>
-        <div class="links">
-            <a href="privacidad-btu.html">Política de Privacidad</a> 
+        <img src="logo-btu.png" alt="BTU Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">BTU A/C Calculator</div>
+            <div class="links">
+                <a href="privacidad-btu.html">Política de Privacidad</a> 
+            </div>
         </div>
     </div>
     
     <div class="app-card">
-        <div class="app-title">IMC - Índice de Masa Corporal</div>
-        <div class="links">
-            <a href="privacidad-imc-corporal.html">Política de Privacidad</a>
+        <img src="logo-imc.png" alt="IMC Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">IMC - Índice de Masa Corporal</div>
+            <div class="links">
+                <a href="privacidad-imc-corporal.html">Política de Privacidad</a>
+            </div>
         </div>
     </div>
     
     <div class="app-card">
-        <div class="app-title">Solar Energy Help</div>
-        <div class="links">
-            <a href="policy-solar-energy-help.html">Política de Privacidad</a>
+        <img src="logo-panel.png" alt="Solar Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">Solar Energy Help</div>
+            <div class="links">
+                <a href="policy-solar-energy-help.html">Política de Privacidad</a>
+            </div>
         </div>
     </div>
-<div class="app-card">
-        <div class="app-title">Boiler Efficiency Calc</div>
-        <div class="links">
-            <a href="policy-boiler-efficiency.html">Política de Privacidad</a>
-        </div>
-    </div>
+
     <div class="app-card">
-        <div class="app-title">WATER S.M.A.</div>
-        <div class="links">
-            <a href="policy-water.html">Política de Privacidad</a>
+        <img src="logo-boiler.png" alt="Boiler Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">Boiler Efficiency Calc</div>
+            <div class="links">
+                <a href="policy-boiler-efficiency.html">Política de Privacidad</a>
+            </div>
         </div>
     </div>
+
     <div class="app-card">
-        <div class="app-title">STEAM WATER</div>
-        <div class="links">
-            <a href="policy-steam-water.html">Política de Privacidad</a>
+        <img src="logo-water.png" alt="Water Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">WATER S.M.A.</div>
+            <div class="links">
+                <a href="policy-water.html">Política de Privacidad</a>
+            </div>
         </div>
     </div>
+
+    <div class="app-card">
+        <img src="logo-steam-water.png" alt="Steam Water Icon" class="app-icon">
+        <div class="app-info">
+            <div class="app-title">STEAM WATER</div>
+            <div class="links">
+                <a href="policy-steam-water.html">Política de Privacidad</a>
+            </div>
+        </div>
+    </div>
+
 <footer>
     <p>&copy; 2026 Simplifiedmaed. Todos los derechos reservados.</p>
     <p><a href="app-ads.txt">Ver app-ads.txt</a></p>
