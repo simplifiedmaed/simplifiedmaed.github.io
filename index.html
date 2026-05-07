@@ -5,57 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simplifiedmaed - Apps Support</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; color: #333; background-color: #f4f7f6; }
+        /* Estilos Base */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            max-width: 1000px; /* Aumentado un poco para las 3 columnas */
+            margin: auto; 
+            padding: 20px; 
+            color: #333; 
+            background-color: #f4f7f6; 
+        }
         
-    header { 
-    text-align: center; 
-    padding: 10px 0; /* 50px arriba y abajo, 0 a los lados */
-    background: #0056b3; 
-    color: white; 
-    border-radius: 8px; 
-    margin-bottom: 20px; 
-}
+        /* Encabezado Ajustado */
+        header { 
+            text-align: center; 
+            padding: 15px 20px; 
+            background: #0056b3; 
+            color: white; 
+            border-radius: 8px; 
+            margin-bottom: 25px; 
+        }
         
         .logo-main { 
-            width: 120px; 
+            width: 100px; /* Un poco más pequeño para ahorrar espacio */
             height: auto; 
             border-radius: 10px; 
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             background-color: white; 
             padding: 5px;
         }
 
-        /* --- NUEVOS ESTILOS PARA LOGOS DE APPS --- */
+        header h1 { margin: 5px 0; font-size: 1.8em; }
+        header p { margin: 2px 0; font-size: 0.9em; opacity: 0.9; }
+
+        /* --- SISTEMA DE CUADRÍCULA (GRID) --- */
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+            gap: 20px; /* Espacio entre tarjetas */
+        }
+
         .app-card { 
             background: white; 
             padding: 20px; 
             border-radius: 12px; 
             box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
-            margin-bottom: 20px; 
             display: flex;
+            flex-direction: column; /* Cambiado a vertical */
             align-items: center;
-            gap: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px); /* Efecto visual al pasar el mouse */
         }
         
         .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 14px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             object-fit: cover;
+            margin-bottom: 15px;
         }
 
         .app-info {
             display: flex;
             flex-direction: column;
+            gap: 5px;
         }
 
-        .app-title { font-size: 1.4em; font-weight: bold; color: #0056b3; margin-bottom: 5px; }
-        .links { margin-top: 5px; }
-        a { color: #007bff; text-decoration: none; font-weight: 500; }
+        .app-title { 
+            font-size: 1.1em; 
+            font-weight: bold; 
+            color: #0056b3; 
+            line-height: 1.2;
+            min-height: 2.4em; /* Mantiene alineación si el título es de 2 líneas */
+        }
+
+        a { color: #007bff; text-decoration: none; font-weight: 500; font-size: 0.9em; }
         a:hover { text-decoration: underline; }
         
-        footer { text-align: center; margin-top: 50px; font-size: 0.9em; color: #777; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.85em; color: #777; }
+
+        /* RESPONSIVO: Para celulares se pone en 1 sola columna */
+        @media (max-width: 768px) {
+            .apps-container { grid-template-columns: repeat(2, 1fr); } /* 2 columnas en tablets */
+        }
+        @media (max-width: 480px) {
+            .apps-container { grid-template-columns: 1fr; } /* 1 columna en celulares */
+        }
     </style>
 </head>
 <body>
@@ -67,43 +107,37 @@
     <p>Contacto: simplified.maed@gmail.com</p>
 </header>
 
+<div class="apps-container">
+
     <div class="app-card">
         <img src="logo-btu.png" alt="BTU Icon" class="app-icon">
         <div class="app-info">
             <div class="app-title">BTU A/C Calculator</div>
-            <div class="links">
-                <a href="privacidad-btu.html">Política de Privacidad</a> 
-            </div>
+            <a href="privacidad-btu.html">Política de Privacidad</a> 
         </div>
     </div>
+
     <div class="app-card">
         <img src="logo-panel.png" alt="Solar Icon" class="app-icon">
         <div class="app-info">
             <div class="app-title">Panel Calc Solar</div>
-            <div class="links">
-                <a href="policy-solar-panel.html">Política de Privacidad</a>
-            </div>
+            <a href="policy-solar-panel.html">Política de Privacidad</a>
         </div>
     </div>
+
     <div class="app-card">
         <img src="logo-imc.png" alt="IMC Icon" class="app-icon">
         <div class="app-info">
-            <div class="app-title">IMC - Índice de Masa Corporal</div>
-            <div class="links">
-                <a href="privacidad-imc-corporal.html">Política de Privacidad</a>
-            </div>
+            <div class="app-title">IMC - Índice Corporal</div>
+            <a href="privacidad-imc-corporal.html">Política de Privacidad</a>
         </div>
     </div>
-    
-
 
     <div class="app-card">
         <img src="logo-boiler.png" alt="Boiler Icon" class="app-icon">
         <div class="app-info">
             <div class="app-title">Boiler Efficiency Calc</div>
-            <div class="links">
-                <a href="policy-boiler-efficiency.html">Política de Privacidad</a>
-            </div>
+            <a href="policy-boiler-efficiency.html">Política de Privacidad</a>
         </div>
     </div>
 
@@ -111,9 +145,7 @@
         <img src="logo-water.png" alt="Water Icon" class="app-icon">
         <div class="app-info">
             <div class="app-title">WATER S.M.A.</div>
-            <div class="links">
-                <a href="policy-water.html">Política de Privacidad</a>
-            </div>
+            <a href="policy-water.html">Política de Privacidad</a>
         </div>
     </div>
 
@@ -121,13 +153,11 @@
         <img src="logo-steam-water.png" alt="Steam Water Icon" class="app-icon">
         <div class="app-info">
             <div class="app-title">STEAM WATER</div>
-            <div class="links">
-                <a href="policy-steam-water.html">Política de Privacidad</a>
-            </div>
+            <a href="policy-steam-water.html">Política de Privacidad</a>
         </div>
     </div>
 
-<footer>
+</div> <footer>
     <p>&copy; 2026 Simplifiedmaed. Todos los derechos reservados.</p>
     <p><a href="app-ads.txt">Ver app-ads.txt</a></p>
 </footer>
