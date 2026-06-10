@@ -13,61 +13,69 @@
         p, li { margin-bottom: 10px; }
         strong { color: #000; }
         hr { border: 0; border-top: 2px solid #eee; margin: 40px 0; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
     <script>
         var userLang = navigator.language || navigator.userLanguage; 
         if (!userLang.startsWith('es')) {
-            window.location.href = "privacidad-imc-corporal-en.html";
+            // CORREGIDO: Redirección al nombre correcto del archivo en inglés para Solar Energy Help
+            window.location.href = "privacy-solar-energy-en.html";
         }
     </script>
 </head>
   
 <body>
     <div class="card">
-        <h1>POLÍTICAS DE PRIVACIDAD</h1>
+        <h1>POLÍTICAS DE PRIVACIDAD Y TÉRMINOS DE USO</h1>
         <div class="info-box">
-            <p><strong>App:</strong> Solar Energy help</p>
+            <p><strong>App:</strong> Solar Energy Help</p>
             <p><strong>Fecha de creación:</strong> 15 de mayo, 2026</p>
-            <p><strong>Última actualización:</strong> 15 de mayo, 2026</p>
+            <p><strong>Última actualización:</strong> 10 de junio, 2026</p>
             <p><strong>Creador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
             <p><strong>Contacto:</strong> simplified.maed@gmail.com</p>
             <p><strong>Web:</strong> sma-apps.netlify.app</p>
         </div>
 
         <h2>1. Prácticas de seguridad</h2>
-        <p>Todos los datos recopilados o procesados por esta aplicación se cifran mediante protocolos seguros (como HTTPS) durante su transmisión y uso. No vendemos ni compartimos información personal o de salud con terceros para fines ajenos al funcionamiento de la publicidad integrada.</p>
+        <p>Todos los datos procesados por esta aplicación se cifran mediante protocolos seguros (como HTTPS) durante su transmisión si corresponde. No vendemos ni compartimos información personal con terceros para fines ajenos al funcionamiento técnico y de la publicidad integrada de la aplicación.</p>
 
         <h2>2. Tipos de datos que recopila esta aplicación</h2>
-        <p>En cumplimiento con las políticas de Google Play, declaramos la recopilación y uso de los siguientes datos:</p>
+        <p>En cumplimiento con las políticas de desarrolladores de Google Play, declaramos la recopilación y uso de los siguientes datos:</p>
         <ul>
-            <li><strong>2.1. Información Personal:</strong> Recopilamos el <strong>nombre</strong> del usuario únicamente con fines de personalización de la interfaz. Este dato no se comparte con terceros.</li>
-            <li><strong>2.2. Ubicación aproximada:</strong> Se utiliza exclusivamente para fines de <strong>publicidad o marketing</strong> a través de proveedores externos como Google AdMob.</li>
-            <li><strong>2.3. Información de rendimiento:</strong> Recopilamos <strong>registros de fallas y diagnósticos</strong> de forma anónima para generar estadísticas y mejorar la estabilidad de la app.</li>
-            <li><strong>2.4. Dispositivo u otros IDs:</strong> Se recopilan identificadores técnicos para fines de <strong>publicidad, marketing y prevención de fraudes</strong>. Estos IDs se comparten con el SDK de Google AdMob.</li>
+            <li><strong>2.1. Información Personal:</strong> Podemos solicitar el <strong>nombre</strong> del usuario únicamente con fines de personalización dentro de la interfaz de la app. Este dato es de uso privado y no se comparte con terceros.</li>
+            <li><strong>2.2. Ubicación aproximada:</strong> Se utiliza para estimar la radiación y energía solar disponible en la zona geográfica del usuario al realizar los cálculos técnicos, así como para fines de <strong>publicidad o marketing</strong> a través del proveedor externo Google AdMob.</li>
+            <li><strong>2.3. Información de rendimiento:</strong> Recopilamos <strong>registros de fallas, rendimiento y diagnósticos</strong> de forma completamente anónima para generar estadísticas y mejorar la estabilidad global de la app.</li>
+            <li><strong>2.4. Dispositivo u otros IDs:</strong> Se recopilan identificadores técnicos (como el ID de publicidad) para fines de <strong>monetización, marketing y prevención de fraudes</strong>. Estos IDs se comparten de manera segura con el SDK de Google AdMob.</li>
         </ul>
 
-        <h2>3. Métodos de procesamiento</h2>
-        <p>El procesamiento de metadatos técnicos y publicitarios se realiza a través de terceros (Google SDKs). Los cálculos de Energía Solar se ejecutan de forma local en el hardware del dispositivo del usuario para garantizar la máxima privacidad.</p>
+        <h2>3. Métodos de procesamiento y Servicios de Terceros</h2>
+        <p>El procesamiento de metadatos técnicos y publicitarios se realiza a través de servicios de terceros confiables. Puede consultar las políticas de privacidad de nuestros proveedores en los siguientes enlaces oficiales:</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
+            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a></li>
+        </ul>
+        <p>Los cálculos de Energía Solar propiamente dichos se ejecutan de forma local en el hardware del dispositivo del usuario para garantizar la máxima privacidad y rapidez.</p>
 
         <h2>4. Retención de datos</h2>
-        <p><strong>Datos locales:</strong> El historial de cálculos y el nombre del proyecto de usuario se conservan de forma indefinida en la base de datos local del dispositivo mientras la aplicación esté instalada.</p>
-        <p><strong>Datos de terceros:</strong> Los datos analíticos y de publicidad se retienen según las políticas de privacidad de <strong>Google AdMob</strong> y <strong>Firebase</strong>.</p>
+        <p><strong>Datos locales:</strong> El historial de cálculos y el nombre de los proyectos del usuario se conservan de forma indefinida en la base de datos local del dispositivo mientras la aplicación permanezca instalada.</p>
+        <p><strong>Datos de terceros:</strong> Los datos analíticos y publicitarios se retienen y gestionan según las políticas de privacidad de los proveedores externos de <strong>Google</strong>.</p>
 
         <h2>5. Eliminación de datos y Derechos del usuario</h2>
-        <p>El usuario puede gestionar su información de la siguiente manera:</p>
+        <p>El usuario tiene el control total para gestionar su información de la siguiente manera:</p>
         <ul>
-            <li><strong>Eliminación manual:</strong> El usuario puede borrar registros individuales o el historial completo desde la configuración de la app.</li>
-            <li><strong>Eliminación total:</strong> Al desinstalar la app o borrar el almacenamiento en los ajustes de Android, todos los datos locales se eliminan permanentemente.</li>
-            <li><strong>Solicitudes:</strong> Para cualquier consulta, escriba a <strong>simplified.maed@gmail.com</strong>.</li>
+            <li><strong>Eliminación manual:</strong> El usuario puede borrar registros individuales o el historial de proyectos guardados directamente desde las opciones internas de la app.</li>
+            <li><strong>Eliminación total:</strong> Al desinstalar la app o borrar el almacenamiento/caché en los ajustes de Android, todos los datos locales se eliminan permanentemente del teléfono.</li>
+            <li><strong>Solicitudes:</strong> Para cualquier consulta o derecho de acceso, escriba a <strong>simplified.maed@gmail.com</strong>.</li>
         </ul>
 
         <hr>
 
-        <h1>Términos y Condiciones</h1>
+        <h1>Términos y Condiciones de Uso</h1>
         <ul>
-            <li>Esta aplicación proporciona cálculos para el sistema de energía solar, carga de electricidad y energía solar disponible en la zona del usuario.</li>
-            <li>La información proporcionada es <strong>solo para fines informativos</strong> y no sustituye el consejo profesional técnico.</li>
-            <li>El uso de esta aplicación es bajo su propia responsabilidad.</li>
+            <li>Esta aplicación proporciona herramientas de asistencia para el cálculo de dimensionamiento fotovoltaico, inversores, consumo eléctrico y estimación de energía solar disponible en la zona del usuario.</li>
+            <li>La información proporcionada se basa en fórmulas estándar y estimaciones matemáticas para <strong>fines puramente informativos y de orientación</strong>; no sustituye el diseño, auditoría o consejo profesional de un ingeniero técnico calificado.</li>
+            <li>El uso de esta aplicación y las interpretaciones de sus resultados son bajo la total y exclusiva responsabilidad del usuario.</li>
         </ul>
     </div>
 </body>
