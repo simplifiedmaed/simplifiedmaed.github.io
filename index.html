@@ -4,292 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.M.A. - Simplified Mobile Apps | Software & Engineering</title>
-    <!-- Fuente moderna desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #030712;
-            --card-bg: rgba(6, 18, 36, 0.75);
-            --card-bg-hover: rgba(9, 28, 56, 0.85);
-            --primary-neon: #00f0ff;
-            --primary-neon-glow: rgba(0, 240, 255, 0.25);
-            --border-neon: rgba(0, 240, 255, 0.3);
-            --border-neon-hover: rgba(0, 240, 255, 0.8);
-            --text-dark: #f8fafc;
-            --text-muted: #94a3b8;
-            --radius: 12px;
-            --shadow-hud: 0 0 20px rgba(0, 240, 255, 0.08), inset 0 0 15px rgba(0, 240, 255, 0.03);
-            --shadow-hud-hover: 0 0 25px rgba(0, 240, 255, 0.25), inset 0 0 20px rgba(0, 240, 255, 0.08);
+            --bg: #07131d;
+            --panel: #0a1b29;
+            --panel-hover: #0d2335;
+            --cyan: #19d9f0;
+            --cyan-bright: #7ff0ff;
+            --line: rgba(25, 217, 240, 0.32);
+            --line-strong: rgba(25, 217, 240, 0.85);
+            --text: #e6f6fb;
+            --muted: #92b3c0;
+            --glow: 0 0 18px rgba(25, 217, 240, 0.14);
+            --glow-strong: 0 0 26px rgba(25, 217, 240, 0.34);
+            --radius: 14px;
+            --font-display: 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body { 
-            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-            line-height: 1.6; 
-            background-color: var(--bg-body); 
-            color: var(--text-dark);
-            padding: 32px 16px;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.06) 0%, transparent 60%),
-                linear-gradient(to bottom, #030712, #0b1329);
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 50% -10%, rgba(25, 217, 240, 0.12), transparent 55%),
+                linear-gradient(rgba(25, 217, 240, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(25, 217, 240, 0.035) 1px, transparent 1px);
+            background-size: auto, 36px 36px, 36px 36px;
             background-attachment: fixed;
             min-height: 100vh;
+            padding: 28px 16px 40px;
         }
 
-        .main-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        /* HEADER HERO - HUD STYLE */
-        header { 
-            background: linear-gradient(135deg, rgba(6, 18, 36, 0.9) 0%, rgba(10, 25, 47, 0.95) 100%);
-            color: white; 
-            padding: 48px 24px; 
-            border-radius: var(--radius); 
-            margin-bottom: 36px; 
-            text-align: center;
-            border: 1px solid var(--border-neon);
-            box-shadow: var(--shadow-hud);
-            position: relative;
+        .main-container { max-width: 1100px; margin: 0 auto; }
+
+        /* HEADER */
+        header {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--glow);
+            margin-bottom: 32px;
             overflow: hidden;
+            position: relative;
         }
-
         header::before {
             content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary-neon), transparent);
+            position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
         }
+        .header-content { padding: 40px 24px 28px; text-align: center; }
 
-        .header-content {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .logo-main { 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 16px; 
-            margin-bottom: 16px;
-            background-color: rgba(255, 255, 255, 0.05); 
+        .logo-main {
+            width: 84px; height: 84px;
+            border-radius: 18px;
             padding: 6px;
-            border: 1px solid var(--border-neon);
-            box-shadow: 0 0 12px var(--primary-neon-glow);
+            margin-bottom: 14px;
+            background: var(--panel-hover);
+            border: 1px solid var(--line-strong);
+            box-shadow: var(--glow-strong);
         }
 
-        header h1 { 
-            font-size: 2.2em; 
+        header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 2.9rem);
             font-weight: 700;
-            letter-spacing: -0.025em;
+            line-height: 1.1;
+            color: var(--cyan);
+            text-shadow: 0 0 14px rgba(25, 217, 240, 0.45);
             margin-bottom: 8px;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
         }
-
-        header p.subtitle { 
-            font-size: 1.05em; 
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-weight: 400;
+        header p.subtitle {
+            max-width: 640px;
+            margin: 0 auto 18px;
+            color: var(--muted);
         }
-
         .contact-pill {
             display: inline-block;
-            background: rgba(0, 240, 255, 0.08);
-            border: 1px solid var(--border-neon);
             padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            color: var(--primary-neon);
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+            border-radius: 999px;
+            border: 1px solid var(--line-strong);
+            background: rgba(25, 217, 240, 0.07);
+            color: var(--cyan-bright);
+            font-size: 0.9rem;
         }
 
-        /* GRID SYSTEM */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+        }
+        .stat { padding: 14px 10px; text-align: center; }
+        .stat + .stat { border-left: 1px solid var(--line); }
+        .stat b {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--cyan-bright);
+        }
+        .stat span { font-size: 0.8rem; color: var(--muted); }
+
+        /* GRID */
         .apps-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
+            gap: 22px;
         }
 
-        /* APP CARDS - HUD TECH STYLE */
-        .app-card { 
-            background: var(--card-bg); 
-            padding: 24px; 
-            border-radius: var(--radius); 
-            border: 1px solid var(--border-neon);
-            box-shadow: var(--shadow-hud); 
+        /* CARDS */
+        .app-card {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: all 0.3s ease-in-out;
-            backdrop-filter: blur(10px);
-            position: relative;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--glow);
+            transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
         }
-
+        .app-card::before,
         .app-card::after {
             content: '';
             position: absolute;
-            bottom: 0; right: 0;
-            width: 10px; height: 10px;
-            border-right: 2px solid var(--primary-neon);
-            border-bottom: 2px solid var(--primary-neon);
-            opacity: 0.6;
+            width: 16px; height: 16px;
+            border: 2px solid var(--cyan);
+            pointer-events: none;
         }
-
+        .app-card::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; border-top-left-radius: var(--radius); }
+        .app-card::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; border-bottom-right-radius: var(--radius); }
         .app-card:hover {
-            transform: translateY(-5px);
-            background: var(--card-bg-hover);
-            box-shadow: var(--shadow-hud-hover);
-            border-color: var(--border-neon-hover);
+            background: var(--panel-hover);
+            border-color: var(--line-strong);
+            box-shadow: var(--glow-strong);
         }
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        
+        .card-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
         .app-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 14px;
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
-            object-fit: cover;
+            width: 64px; height: 64px;
             flex-shrink: 0;
-            border: 1px solid var(--border-neon);
-            background: rgba(255, 255, 255, 0.05);
+            object-fit: cover;
+            border-radius: 14px;
+            background: var(--bg);
+            border: 1px solid var(--line-strong);
+        }
+        .app-title {
+            font-family: var(--font-display);
+            font-size: 1.55rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--cyan-bright);
         }
 
-        .app-title { 
-            font-size: 1.25em; 
-            font-weight: 600; 
-            color: #ffffff; 
-            line-height: 1.3;
-            text-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
-        }
-
-        /* TECH TAGS */
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 14px;
-        }
-
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
         .tag {
-            background-color: rgba(0, 240, 255, 0.06);
-            color: var(--primary-neon);
-            font-size: 0.75rem;
+            padding: 2px 10px;
+            font-size: 0.76rem;
             font-weight: 500;
-            padding: 3px 9px;
+            color: var(--cyan);
+            background: rgba(25, 217, 240, 0.08);
+            border: 1px solid var(--line);
             border-radius: 6px;
-            border: 1px solid rgba(0, 240, 255, 0.2);
         }
 
-        /* TECH DETAILS */
-        .tech-details {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        .tech-details { margin-bottom: 20px; font-size: 0.88rem; }
+        .tech-details h3 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text);
+            padding-bottom: 6px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid var(--line);
         }
+        .tech-details ul { padding-left: 18px; }
+        .tech-details li { margin-bottom: 5px; color: #c3dbe4; }
+        .tech-details li::marker { color: var(--cyan); }
 
-        .tech-details strong {
-            color: #e2e8f0;
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.88rem;
-            letter-spacing: 0.02em;
-        }
-
-        .tech-details ul {
-            margin: 4px 0 0 0;
-            padding-left: 18px;
-        }
-
-        .tech-details li {
-            margin-bottom: 4px;
-            color: var(--text-muted);
-        }
-
-        /* LINKS & BUTTONS */
+        /* LINKS */
         .app-links {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             margin-top: auto;
             padding-top: 16px;
-            border-top: 1px solid rgba(0, 240, 255, 0.15);
+            border-top: 1px solid var(--line);
         }
-
-        a { 
-            color: var(--primary-neon); 
-            text-decoration: none; 
-            font-weight: 500; 
-            font-size: 0.88em; 
-            transition: color 0.2s;
-        }
-
-        a:hover { 
-            color: #ffffff;
-            text-shadow: 0 0 8px var(--primary-neon);
-            text-decoration: none; 
-        }
+        a { color: var(--cyan); text-decoration: none; font-weight: 500; font-size: 0.88rem; }
+        a:hover { color: var(--cyan-bright); text-decoration: underline; text-underline-offset: 3px; }
+        a:focus-visible, .btn-store:focus-visible { outline: 2px solid var(--cyan-bright); outline-offset: 3px; }
 
         .btn-store {
-            background: linear-gradient(135deg, #0099ff 0%, #00f0ff 100%);
-            color: #030712 !important;
+            display: block;
             padding: 10px 14px;
-            border-radius: 8px;
-            font-size: 0.88em;
+            text-align: center;
             font-weight: 600;
-            text-align: center;
-            box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
-            transition: all 0.2s;
-            border: none;
+            color: #04141c !important;
+            background: var(--cyan);
+            box-shadow: 0 0 16px rgba(25, 217, 240, 0.4);
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            transition: background 0.2s, box-shadow 0.2s;
         }
+        .btn-store:hover { background: var(--cyan-bright); text-decoration: none; }
 
-        .btn-store:hover {
-            background: linear-gradient(135deg, #00bfff, #48cae4);
-            color: #030712 !important;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
-            text-shadow: none;
-        }
-
-        .link-policy {
-            text-align: center;
-            font-size: 0.8em;
-            color: var(--text-muted);
-        }
+        .link-policy { text-align: center; font-size: 0.82rem; color: var(--muted); }
+        .link-policy:hover { color: var(--cyan-bright); }
 
         /* FOOTER */
-        footer { 
-            text-align: center; 
-            margin-top: 48px; 
-            padding-top: 24px;
-            border-top: 1px solid rgba(0, 240, 255, 0.15);
-            font-size: 0.85em; 
-            color: var(--text-muted); 
+        footer {
+            margin-top: 44px;
+            padding-top: 22px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
         }
+        footer a { color: var(--muted); }
+        footer a:hover { color: var(--cyan-bright); }
 
-        footer a {
-            color: var(--text-muted);
-        }
-
-        /* RESPONSIVO */
         @media (max-width: 640px) {
-            header h1 { font-size: 1.6em; }
             .apps-container { grid-template-columns: 1fr; }
+            .header-content { padding: 32px 16px 22px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
         }
     </style>
 </head>
@@ -299,21 +248,25 @@
 
     <header>
         <div class="header-content">
-            <img src="sma.png" alt="Logo S.M.A." class="logo-main">
+            <img src="logo_sma.png" alt="Logo S.M.A." class="logo-main">
             <h1>S.M.A. - Simplified Mobile Apps</h1>
             <p class="subtitle">Desarrollo de Software de Ingeniería & Aplicaciones Móviles Nativas (Android/Java)</p>
             <div class="contact-pill">Soporte & Contacto: simplified.maed@gmail.com</div>
         </div>
+        <div class="stats">
+            <div class="stat"><b>8</b><span>Aplicaciones</span></div>
+            <div class="stat"><b>Java</b><span>Android nativo</span></div>
+            <div class="stat"><b>NFPA · OMS</b><span>Normas aplicadas</span></div>
+        </div>
     </header>
 
-    <div class="apps-container">
+    <main class="apps-container">
 
-        <!-- Panel Calc Solar -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-panel.png" alt="Panel Calc Solar Icon" class="app-icon">
-                    <div class="app-title">Panel Calc Solar</div>
+                    <h2 class="app-title">Panel Calc Solar</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -322,7 +275,7 @@
                     <span class="tag">Sensores</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Calibración de inclinómetro y brújula integrada.</li>
                         <li>Cálculo de radiación solar con Open-Meteo API.</li>
@@ -331,17 +284,16 @@
                 </div>
             </div>
             <div class="app-links">
-                <a href="https://play.google.com/store/apps/details?id=com.sma.panelcalcsolar" target="_blank" class="btn-store">Ver en Google Play</a>
+                <a href="https://play.google.com/store/apps/details?id=com.sma.panelcalcsolar" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
                 <a href="policy-solar-panel.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- BTU A/C Calculator -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-btu.png" alt="BTU Icon" class="app-icon">
-                    <div class="app-title">BTU A/C Calculator</div>
+                    <h2 class="app-title">BTU A/C Calculator</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -349,7 +301,7 @@
                     <span class="tag">AdMob</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Cálculo de cargas térmicas para acondicionamiento de aire.</li>
                         <li>Interfaz gráfica interactiva para parámetros estructurales.</li>
@@ -360,14 +312,13 @@
             <div class="app-links">
                 <a href="privacidad-btu.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- Boiler Efficiency Calc -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-boiler.png" alt="Boiler Icon" class="app-icon">
-                    <div class="app-title">Boiler Efficiency Calc</div>
+                    <h2 class="app-title">Boiler Efficiency Calc</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -375,7 +326,7 @@
                     <span class="tag">Android Studio</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Cálculo de eficiencia térmica por método directo e indirecto.</li>
                         <li>Balances energéticos para calderas de vapor industriales.</li>
@@ -386,14 +337,13 @@
             <div class="app-links">
                 <a href="policy-boiler-efficiency.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- SprinkCalc -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="icogit.png" alt="SprinkCalc Icon" class="app-icon">
-                    <div class="app-title">SprinkCalculator</div>
+                    <h2 class="app-title">SprinkCalculator</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -401,7 +351,7 @@
                     <span class="tag">Canvas UI</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Cálculos hidráulicos de pérdidas por fricción (Hazen-Williams).</li>
                         <li>Diseño de redes de rociadores bajo norma NFPA 13.</li>
@@ -412,14 +362,13 @@
             <div class="app-links">
                 <a href="policy-sprinkcalc.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- IMC - Índice Corporal -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-imc.png" alt="IMC Icon" class="app-icon">
-                    <div class="app-title">Control IMC - OMS</div>
+                    <h2 class="app-title">Control IMC - OMS</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -427,7 +376,7 @@
                     <span class="tag">Play Billing</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Algoritmos de clasificación ponderal bajo estándares OMS.</li>
                         <li>Gráficos interactivos de evolución con MPAndroidChart.</li>
@@ -438,14 +387,13 @@
             <div class="app-links">
                 <a href="privacidad-imc-corporal.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- Solar Energy Help -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="ico4.png" alt="Solar Energy Help Icon" class="app-icon">
-                    <div class="app-title">Solar Energy Help</div>
+                    <h2 class="app-title">Solar Energy Help</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
@@ -453,7 +401,7 @@
                     <span class="tag">REST API</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Estimación de inclinación y orientación óptima de paneles.</li>
                         <li>Integración de datos de irradiancia geográfica en tiempo real.</li>
@@ -463,21 +411,20 @@
             <div class="app-links">
                 <a href="policy-solar-energy-help.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- WATER S.M.A. -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-water.png" alt="Water Icon" class="app-icon">
-                    <div class="app-title">WATER S.M.A.</div>
+                    <h2 class="app-title">WATER S.M.A.</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
                     <span class="tag">Mecánica de Fluidos</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Cálculo de propiedades termodinámicas del agua líquida.</li>
                         <li>Algoritmos de precisión para aplicaciones industriales.</li>
@@ -487,21 +434,20 @@
             <div class="app-links">
                 <a href="policy-water.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
+        </article>
 
-        <!-- STEAM WATER -->
-        <div class="app-card">
+        <article class="app-card">
             <div>
                 <div class="card-header">
                     <img src="logo-steam-water.png" alt="Steam Water Icon" class="app-icon">
-                    <div class="app-title">STEAM WATER</div>
+                    <h2 class="app-title">STEAM WATER</h2>
                 </div>
                 <div class="tech-tags">
                     <span class="tag">Java</span>
                     <span class="tag">Tablas de Vapor</span>
                 </div>
                 <div class="tech-details">
-                    <strong>Implementación Técnica:</strong>
+                    <h3>Implementación técnica</h3>
                     <ul>
                         <li>Evaluación de vapor saturado y sobrecalentado.</li>
                         <li>Optimización de consultas para cálculos rápidos sin conexión.</li>
@@ -511,9 +457,8 @@
             <div class="app-links">
                 <a href="policy-steam-water.html" class="link-policy">Política de Privacidad</a>
             </div>
-        </div>
-
-    </div>
+        </article>
+    </main>
 
     <footer>
         <p>&copy; 2026 S.M.A. - Simplified Mobile Apps. Todos los derechos reservados.</p>
