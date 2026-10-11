@@ -6,7 +6,7 @@
     <title>S.M.A. - Simplified Mobile Apps | Software & Engineering</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #07131d;
@@ -21,8 +21,8 @@
             --glow: 0 0 18px rgba(25, 217, 240, 0.14);
             --glow-strong: 0 0 26px rgba(25, 217, 240, 0.34);
             --radius: 14px;
-            --font-display: 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
-            --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            --font-display: 'Orbitron', 'Segoe UI', system-ui, sans-serif;
+            --font-body: 'Orbitron', system-ui, -apple-system, 'Segoe UI', sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,7 +32,9 @@
             line-height: 1.6;
             color: var(--text);
             background-color: var(--bg);
-            background-image: radial-gradient(ellipse at 50% -10%, rgba(25, 217, 240, 0.12), transparent 55%);
+            background-image:
+                radial-gradient(ellipse at 50% -10%, rgba(25, 217, 240, 0.12), transparent 55%);
+            background-size: auto;
             background-attachment: fixed;
             min-height: 100vh;
             padding: 28px 16px 40px;
@@ -58,13 +60,10 @@
         .header-content { padding: 40px 24px 28px; text-align: center; }
 
         .logo-main {
-            width: 84px; height: 84px;
-            border-radius: 18px;
-            padding: 6px;
+            width: clamp(84px, 10vw, 110px);
+            height: auto;
+            max-width: 100%;
             margin-bottom: 14px;
-            background: var(--panel-hover);
-            border: 1px solid var(--line-strong);
-            box-shadow: var(--glow-strong);
         }
 
         header h1 {
@@ -78,17 +77,20 @@
         }
         header p.subtitle {
             max-width: 640px;
-            margin: 0 auto 18px;
+            margin: 0 auto 14px;
             color: var(--muted);
+            letter-spacing: 0.15em;
         }
         .contact-pill {
             display: inline-block;
-            padding: 6px 18px;
+            padding: 6px 14px;
             border-radius: 999px;
             border: 1px solid var(--line-strong);
             background: rgba(25, 217, 240, 0.07);
-            color: var(--cyan-bright);
-            font-size: 0.9rem;
+            color: var(--cyan);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-shadow: 0 0 14px rgba(25, 217, 240, 0.45);
         }
 
         .stats {
@@ -188,6 +190,49 @@
         .tech-details li { margin-bottom: 5px; color: #c3dbe4; }
         .tech-details li::marker { color: var(--cyan); }
 
+        .install-chart {
+            margin: 0 0 20px;
+            padding: 12px 10px 8px;
+            background: rgba(3, 14, 23, 0.72);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            box-shadow: inset 0 0 18px rgba(25, 217, 240, 0.05);
+        }
+        .install-chart figcaption {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 4px;
+            font-family: var(--font-display);
+            font-size: 0.68rem;
+            letter-spacing: 0.06em;
+            color: var(--cyan-bright);
+        }
+        .install-chart figcaption strong { font-size: 0.8rem; white-space: nowrap; }
+        .install-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+        .install-chart .chart-grid { stroke: rgba(146, 179, 192, 0.2); stroke-width: 1; }
+        .install-chart .chart-label {
+            fill: var(--muted);
+            font: 9px 'Orbitron', sans-serif;
+        }
+        .install-chart .chart-area { fill: url(#chart-area-gradient); }
+        .install-chart .chart-line {
+            fill: none;
+            stroke: var(--cyan);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 4px rgba(25, 217, 240, 0.8));
+        }
+        .install-chart .chart-endpoint {
+            fill: var(--bg);
+            stroke: var(--cyan-bright);
+            stroke-width: 2;
+            filter: drop-shadow(0 0 4px rgba(25, 217, 240, 0.9));
+        }
+        .chart-note { margin-top: 2px; font-size: 0.62rem; color: var(--muted); }
+
         /* LINKS */
         .app-links {
             display: flex;
@@ -250,13 +295,40 @@
             <div class="contact-pill">Soporte & Contacto: simplified.maed@gmail.com</div>
         </div>
         <div class="stats">
-            <div class="stat"><b>8</b><span>Aplicaciones</span></div>
+            <div class="stat"><b>6</b><span>Aplicaciones</span></div>
             <div class="stat"><b>Java</b><span>Android nativo</span></div>
             <div class="stat"><b>NFPA · OMS</b><span>Normas aplicadas</span></div>
         </div>
     </header>
 
     <main class="apps-container">
+
+        <article class="app-card">
+            <div>
+                <div class="card-header">
+                    <img src="logo-btu.png" alt="BTU Icon" class="app-icon">
+                    <h2 class="app-title">BTU A/C Calculator</h2>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">HVAC Sizing</span>
+                    <span class="tag">AdMob</span>
+                </div>
+                <div class="tech-details">
+                    <h3>Implementación técnica</h3>
+                    <ul>
+                        <li>Cálculo de cargas térmicas para acondicionamiento de aire.</li>
+                        <li>Interfaz gráfica interactiva para parámetros estructurales.</li>
+                        <li>Monetización con anuncios intermitentes AdMob.</li>
+                    </ul>
+                </div>
+                <figure class="install-chart" data-chart="btu-calculator"></figure>
+            </div>
+            <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sma.btu" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
+                <a href="privacidad-btu.html" class="link-policy">Política de Privacidad</a>
+            </div>
+        </article>
 
         <article class="app-card">
             <div>
@@ -278,35 +350,11 @@
                         <li>Persistencia local de proyectos de ingeniería.</li>
                     </ul>
                 </div>
+                <figure class="install-chart" data-chart="panel-calc-solar"></figure>
             </div>
             <div class="app-links">
                 <a href="https://play.google.com/store/apps/details?id=com.sma.panelcalcsolar" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
                 <a href="policy-solar-panel.html" class="link-policy">Política de Privacidad</a>
-            </div>
-        </article>
-
-        <article class="app-card">
-            <div>
-                <div class="card-header">
-                    <img src="logo-btu.png" alt="BTU Icon" class="app-icon">
-                    <h2 class="app-title">BTU A/C Calculator</h2>
-                </div>
-                <div class="tech-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">HVAC Sizing</span>
-                    <span class="tag">AdMob</span>
-                </div>
-                <div class="tech-details">
-                    <h3>Implementación técnica</h3>
-                    <ul>
-                        <li>Cálculo de cargas térmicas para acondicionamiento de aire.</li>
-                        <li>Interfaz gráfica interactiva para parámetros estructurales.</li>
-                        <li>Monetización con anuncios intermitentes AdMob.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="app-links">
-                <a href="privacidad-btu.html" class="link-policy">Política de Privacidad</a>
             </div>
         </article>
 
@@ -329,34 +377,11 @@
                         <li>Soporte multilingüe para mercado global.</li>
                     </ul>
                 </div>
+                <figure class="install-chart" data-chart="boiler-efficiency"></figure>
             </div>
             <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sma.boilerefficiencycalc" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
                 <a href="policy-boiler-efficiency.html" class="link-policy">Política de Privacidad</a>
-            </div>
-        </article>
-
-        <article class="app-card">
-            <div>
-                <div class="card-header">
-                    <img src="icogit.png" alt="SprinkCalc Icon" class="app-icon">
-                    <h2 class="app-title">SprinkCalculator</h2>
-                </div>
-                <div class="tech-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">NFPA 13</span>
-                    <span class="tag">Canvas UI</span>
-                </div>
-                <div class="tech-details">
-                    <h3>Implementación técnica</h3>
-                    <ul>
-                        <li>Cálculos hidráulicos de pérdidas por fricción (Hazen-Williams).</li>
-                        <li>Diseño de redes de rociadores bajo norma NFPA 13.</li>
-                        <li>Renderizado dinámico de tuberías en Canvas nativo.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="app-links">
-                <a href="policy-sprinkcalc.html" class="link-policy">Política de Privacidad</a>
             </div>
         </article>
 
@@ -379,56 +404,11 @@
                         <li>Facturación de suscripciones con Google Play Billing API.</li>
                     </ul>
                 </div>
+                <figure class="install-chart" data-chart="control-imc"></figure>
             </div>
             <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sma.imc_indicedemasacorporal" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
                 <a href="privacidad-imc-corporal.html" class="link-policy">Política de Privacidad</a>
-            </div>
-        </article>
-
-        <article class="app-card">
-            <div>
-                <div class="card-header">
-                    <img src="ico4.png" alt="Solar Energy Help Icon" class="app-icon">
-                    <h2 class="app-title">Solar Energy Help</h2>
-                </div>
-                <div class="tech-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">Fotovoltaica</span>
-                    <span class="tag">REST API</span>
-                </div>
-                <div class="tech-details">
-                    <h3>Implementación técnica</h3>
-                    <ul>
-                        <li>Estimación de inclinación y orientación óptima de paneles.</li>
-                        <li>Integración de datos de irradiancia geográfica en tiempo real.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="app-links">
-                <a href="policy-solar-energy-help.html" class="link-policy">Política de Privacidad</a>
-            </div>
-        </article>
-
-        <article class="app-card">
-            <div>
-                <div class="card-header">
-                    <img src="logo-water.png" alt="Water Icon" class="app-icon">
-                    <h2 class="app-title">WATER S.M.A.</h2>
-                </div>
-                <div class="tech-tags">
-                    <span class="tag">Java</span>
-                    <span class="tag">Mecánica de Fluidos</span>
-                </div>
-                <div class="tech-details">
-                    <h3>Implementación técnica</h3>
-                    <ul>
-                        <li>Cálculo de propiedades termodinámicas del agua líquida.</li>
-                        <li>Algoritmos de precisión para aplicaciones industriales.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="app-links">
-                <a href="policy-water.html" class="link-policy">Política de Privacidad</a>
             </div>
         </article>
 
@@ -449,9 +429,36 @@
                         <li>Optimización de consultas para cálculos rápidos sin conexión.</li>
                     </ul>
                 </div>
+                <figure class="install-chart" data-chart="steam-water"></figure>
             </div>
             <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sma.steam_water" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
                 <a href="policy-steam-water.html" class="link-policy">Política de Privacidad</a>
+            </div>
+        </article>
+
+        <article class="app-card">
+            <div>
+                <div class="card-header">
+                    <img src="logo-water.png" alt="Water Icon" class="app-icon">
+                    <h2 class="app-title">WATER S.M.A.</h2>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Mecánica de Fluidos</span>
+                </div>
+                <div class="tech-details">
+                    <h3>Implementación técnica</h3>
+                    <ul>
+                        <li>Cálculo de propiedades termodinámicas del agua líquida.</li>
+                        <li>Algoritmos de precisión para aplicaciones industriales.</li>
+                    </ul>
+                </div>
+                <figure class="install-chart" data-chart="water-sma"></figure>
+            </div>
+            <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.sma.water" target="_blank" rel="noopener" class="btn-store">Ver en Google Play</a>
+                <a href="policy-water.html" class="link-policy">Política de Privacidad</a>
             </div>
         </article>
     </main>
@@ -462,6 +469,119 @@
     </footer>
 
 </div>
+
+<script>
+    const installationCharts = {
+        "panel-calc-solar": {
+            title: "PANEL CALC SOLAR", min: 360, max: 600,
+            ticks: [360, 420, 480, 540, 600], labels: ["ago 2026", "sept", "oct"],
+            values: [393, 398, 398, 409, 418, 420, 423, 427, 438, 449, 461, 470, 482, 498, 511, 523, 530, 538, 545, 554, 563, 571, 579]
+        },
+        "btu-calculator": {
+            title: "BTU A/C CALCULATOR", min: 7500, max: 17500,
+            ticks: [7500, 10000, 12500, 15000, 17500], labels: ["may 2026", "jul", "oct"],
+            values: [9200, 9500, 9900, 10300, 10700, 11200, 11700, 12100, 12500, 12900, 13200, 13500, 13800, 14100, 14500, 14800, 15100, 15400, 15700, 16000, 16200, 16500]
+        },
+        "boiler-efficiency": {
+            title: "BOILER EFFICIENCY CALC", min: 1140, max: 1380,
+            ticks: [1140, 1200, 1260, 1320, 1380], labels: ["ago 2026", "sept", "oct"],
+            values: [1175, 1182, 1185, 1195, 1203, 1210, 1212, 1225, 1233, 1240, 1250, 1258, 1268, 1270, 1275, 1280, 1288, 1293, 1297, 1305, 1310, 1318, 1325, 1330, 1338, 1342, 1350, 1355, 1360, 1368]
+        },
+        "control-imc": {
+            title: "CONTROL IMC - OMS", min: 690, max: 810,
+            ticks: [690, 720, 750, 780, 810], labels: ["ago 2026", "sept", "oct"],
+            values: [719, 722, 724, 727, 730, 733, 735, 739, 741, 744, 745, 750, 756, 760, 766, 772, 775, 780, 785, 791, 793, 798, 802, 802, 804, 804, 806]
+        },
+        "water-sma": {
+            title: "WATER S.M.A.", min: 1100, max: 1300,
+            ticks: [1100, 1150, 1200, 1250, 1300], labels: ["may 2026", "jul", "oct"],
+            values: [1130, 1140, 1150, 1160, 1170, 1190, 1200, 1210, 1220, 1230, 1240, 1245, 1250, 1260, 1270, 1275, 1280, 1282, 1285, 1290, 1292, 1298]
+        },
+        "steam-water": {
+            title: "STEAM WATER", min: 350, max: 630,
+            ticks: [350, 420, 490, 560, 630], labels: ["may 2026", "jul", "oct"],
+            values: [410, 420, 423, 425, 430, 438, 445, 448, 460, 480, 488, 495, 497, 500, 505, 510, 520, 530, 535, 540, 545, 550, 555, 560, 562, 570, 573, 578, 582, 585, 590, 592, 595, 598, 602]
+        }
+    };
+
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    const createSvgElement = (name, attributes = {}) => {
+        const element = document.createElementNS(svgNamespace, name);
+        for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, value);
+        return element;
+    };
+
+    document.querySelectorAll(".install-chart").forEach((chart, index) => {
+        const data = installationCharts[chart.dataset.chart];
+        if (!data) return;
+
+        const width = 380;
+        const height = 166;
+        const plot = { left: 48, right: 372, top: 8, bottom: 126 };
+        const x = (i) => plot.left + (i / (data.values.length - 1)) * (plot.right - plot.left);
+        const y = (value) => plot.bottom - ((value - data.min) / (data.max - data.min)) * (plot.bottom - plot.top);
+        const linePoints = data.values.map((value, i) => `${x(i)},${y(value)}`).join(" ");
+        const gradientId = `chart-gradient-${index}`;
+
+        const caption = document.createElement("figcaption");
+        const title = document.createElement("span");
+        title.textContent = data.title;
+        const total = document.createElement("strong");
+        total.textContent = `~${data.values[data.values.length - 1].toLocaleString("es")}`;
+        caption.append(title, total);
+
+        const svg = createSvgElement("svg", {
+            viewBox: `0 0 ${width} ${height}`,
+            role: "img",
+            "aria-label": `Crecimiento aproximado de instalaciones de ${data.title.toLowerCase()}`
+        });
+        const defs = createSvgElement("defs");
+        const gradient = createSvgElement("linearGradient", { id: gradientId, x1: "0", y1: "0", x2: "0", y2: "1" });
+        gradient.append(
+            createSvgElement("stop", { offset: "0%", "stop-color": "#19d9f0", "stop-opacity": "0.3" }),
+            createSvgElement("stop", { offset: "100%", "stop-color": "#19d9f0", "stop-opacity": "0" })
+        );
+        defs.append(gradient);
+        svg.append(defs);
+
+        data.ticks.forEach((tick) => {
+            const tickY = y(tick);
+            svg.append(
+                createSvgElement("line", { x1: plot.left, y1: tickY, x2: plot.right, y2: tickY, class: "chart-grid" })
+            );
+            const label = createSvgElement("text", { x: plot.left - 5, y: tickY + 3, "text-anchor": "end", class: "chart-label" });
+            label.textContent = tick.toLocaleString("es");
+            svg.append(label);
+        });
+
+        const area = createSvgElement("polygon", {
+            points: `${plot.left},${plot.bottom} ${linePoints} ${plot.right},${plot.bottom}`,
+            class: "chart-area",
+            style: `fill: url(#${gradientId})`
+        });
+        const line = createSvgElement("polyline", { points: linePoints, class: "chart-line" });
+        const endpoint = createSvgElement("circle", {
+            cx: x(data.values.length - 1), cy: y(data.values[data.values.length - 1]), r: 3.5, class: "chart-endpoint"
+        });
+        svg.append(area, line, endpoint);
+
+        data.labels.forEach((month, i) => {
+            const label = createSvgElement("text", {
+                x: plot.left + (i / (data.labels.length - 1)) * (plot.right - plot.left),
+                y: 149,
+                "text-anchor": i === 0 ? "start" : i === data.labels.length - 1 ? "end" : "middle",
+                class: "chart-label"
+            });
+            label.textContent = month;
+            svg.append(label);
+        });
+
+        const note = document.createElement("p");
+        note.className = "chart-note";
+        note.textContent = "Instalaciones acumuladas · reconstrucción visual aproximada";
+        chart.append(caption, svg, note);
+    });
+</script>
 
 </body>
 </html>
