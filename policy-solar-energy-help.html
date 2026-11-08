@@ -1,82 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLÍTICAS DE PRIVACIDAD - Solar Energy Help</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 30px; color: #333; max-width: 900px; margin: auto; background-color: #f9f9f9; }
-        .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #333; margin-top: 25px; font-size: 1.3em; }
-        .info-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
-        p, li { margin-bottom: 10px; }
-        strong { color: #000; }
-        hr { border: 0; border-top: 2px solid #eee; margin: 40px 0; }
-        a { color: #0056b3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
-    <script>
-        var userLang = navigator.language || navigator.userLanguage; 
-        if (!userLang.startsWith('es')) {
-            // CORREGIDO: Redirección al nombre correcto del archivo en inglés para Solar Energy Help
-            window.location.href = "privacy-solar-energy-en.html";
-        }
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy and Terms of Use - Solar Energy Help</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050b12;--panel:#0a1722;--line:#12394a;--cyan:#22e4ff;--text:#cfe9f2;--muted:#7fa3b3;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#0b2a3a 0%,var(--bg) 60%) fixed;color:var(--text);font:17px/1.7 "Rajdhani","Segoe UI",system-ui,sans-serif;padding:max(20px,env(safe-area-inset-top)) 18px 40px}
+.wrap{max-width:760px;margin:0 auto}
+header{border:1px solid var(--line);background:var(--panel);padding:22px 24px;position:relative;margin-bottom:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+header::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+.brand{color:var(--cyan);font-weight:600;letter-spacing:.04em;font-size:.95rem}
+h1{margin:6px 0 10px;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.15;color:#fff;text-shadow:0 0 18px rgba(34,228,255,.35)}
+.meta{margin:0;padding:0;list-style:none;color:var(--muted);font-size:.97rem;line-height:1.6}
+.meta strong{color:var(--text);font-weight:600}
+h2{font-size:1.2rem;color:var(--cyan);margin:26px 0 6px;font-weight:600}
+h2.part{font-size:1.6rem;color:#fff;margin:40px 0 8px;padding-top:24px;border-top:1px solid var(--line)}
+p{margin:0 0 12px;max-width:68ch}
+ul{margin:0 0 12px;padding-left:20px;max-width:68ch}
+li{margin-bottom:8px}
+li::marker{color:var(--cyan)}
+strong{color:#fff;font-weight:600}
+a{color:var(--cyan);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.95rem}
+@media (prefers-reduced-motion:no-preference){header::before{animation:glow 3.2s ease-in-out infinite alternate}}
+@keyframes glow{from{box-shadow:0 0 6px var(--cyan)}to{box-shadow:0 0 18px var(--cyan)}}
+
+.meta a{word-break:break-all}
+h3{font-size:1.02rem;color:#fff;margin:14px 0 2px;font-weight:600}
+</style>
 </head>
-  
 <body>
-    <div class="card">
-        <h1>POLÍTICAS DE PRIVACIDAD Y TÉRMINOS DE USO</h1>
-        <div class="info-box">
-            <p><strong>App:</strong> Solar Energy Help</p>
-            <p><strong>Fecha de creación:</strong> 15 de mayo, 2026</p>
-            <p><strong>Última actualización:</strong> 10 de junio, 2026</p>
-            <p><strong>Creador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
-            <p><strong>Contacto:</strong> simplified.maed@gmail.com</p>
-            <p><strong>Web:</strong> sma-apps.netlify.app</p>
-        </div>
-
-        <h2>1. Prácticas de seguridad</h2>
-        <p>Todos los datos procesados por esta aplicación se cifran mediante protocolos seguros (como HTTPS) durante su transmisión si corresponde. No vendemos ni compartimos información personal con terceros para fines ajenos al funcionamiento técnico y de la publicidad integrada de la aplicación.</p>
-
-        <h2>2. Tipos de datos que recopila esta aplicación</h2>
-        <p>En cumplimiento con las políticas de desarrolladores de Google Play, declaramos la recopilación y uso de los siguientes datos:</p>
-        <ul>
-            <li><strong>2.1. Información Personal:</strong> Podemos solicitar el <strong>nombre</strong> del usuario únicamente con fines de personalización dentro de la interfaz de la app. Este dato es de uso privado y no se comparte con terceros.</li>
-            <li><strong>2.2. Ubicación aproximada:</strong> Se utiliza para estimar la radiación y energía solar disponible en la zona geográfica del usuario al realizar los cálculos técnicos, así como para fines de <strong>publicidad o marketing</strong> a través del proveedor externo Google AdMob.</li>
-            <li><strong>2.3. Información de rendimiento:</strong> Recopilamos <strong>registros de fallas, rendimiento y diagnósticos</strong> de forma completamente anónima para generar estadísticas y mejorar la estabilidad global de la app.</li>
-            <li><strong>2.4. Dispositivo u otros IDs:</strong> Se recopilan identificadores técnicos (como el ID de publicidad) para fines de <strong>monetización, marketing y prevención de fraudes</strong>. Estos IDs se comparten de manera segura con el SDK de Google AdMob.</li>
-        </ul>
-
-        <h2>3. Métodos de procesamiento y Servicios de Terceros</h2>
-        <p>El procesamiento de metadatos técnicos y publicitarios se realiza a través de servicios de terceros confiables. Puede consultar las políticas de privacidad de nuestros proveedores en los siguientes enlaces oficiales:</p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob</a></li>
-        </ul>
-        <p>Los cálculos de Energía Solar propiamente dichos se ejecutan de forma local en el hardware del dispositivo del usuario para garantizar la máxima privacidad y rapidez.</p>
-
-        <h2>4. Retención de datos</h2>
-        <p><strong>Datos locales:</strong> El historial de cálculos y el nombre de los proyectos del usuario se conservan de forma indefinida en la base de datos local del dispositivo mientras la aplicación permanezca instalada.</p>
-        <p><strong>Datos de terceros:</strong> Los datos analíticos y publicitarios se retienen y gestionan según las políticas de privacidad de los proveedores externos de <strong>Google</strong>.</p>
-
-        <h2>5. Eliminación de datos y Derechos del usuario</h2>
-        <p>El usuario tiene el control total para gestionar su información de la siguiente manera:</p>
-        <ul>
-            <li><strong>Eliminación manual:</strong> El usuario puede borrar registros individuales o el historial de proyectos guardados directamente desde las opciones internas de la app.</li>
-            <li><strong>Eliminación total:</strong> Al desinstalar la app o borrar el almacenamiento/caché en los ajustes de Android, todos los datos locales se eliminan permanentemente del teléfono.</li>
-            <li><strong>Solicitudes:</strong> Para cualquier consulta o derecho de acceso, escriba a <strong>simplified.maed@gmail.com</strong>.</li>
-        </ul>
-
-        <hr>
-
-        <h1>Términos y Condiciones de Uso</h1>
-        <ul>
-            <li>Esta aplicación proporciona herramientas de asistencia para el cálculo de dimensionamiento fotovoltaico, inversores, consumo eléctrico y estimación de energía solar disponible en la zona del usuario.</li>
-            <li>La información proporcionada se basa en fórmulas estándar y estimaciones matemáticas para <strong>fines puramente informativos y de orientación</strong>; no sustituye el diseño, auditoría o consejo profesional de un ingeniero técnico calificado.</li>
-            <li>El uso de esta aplicación y las interpretaciones de sus resultados son bajo la total y exclusiva responsabilidad del usuario.</li>
-        </ul>
-    </div>
+<div class="wrap">
+<header>
+  <div class="brand">S.M.A. · Simplified Mobile Apps</div>
+  <h1>Privacy Policy and Terms of Use</h1>
+  <ul class="meta">
+    <li><strong>Creation date:</strong> May 15, 2026</li>
+    <li><strong>Last updated:</strong> November 8, 2026</li>
+    <li><strong>Developer:</strong> S.M.A. - Simplified Mobile Apps</li>
+    <li><strong>Applicable app:</strong> Solar Energy Help</li>
+    <li><strong>Contact:</strong> <a href="mailto:simplified.maed@gmail.com">simplified.maed@gmail.com</a></li>
+    <li><strong>Web:</strong> sma-apps.netlify.app</li>
+  </ul>
+</header>
+<main>
+<section>
+<p>This Privacy Policy explains how Solar Energy Help (the "app"), published by S.M.A. - Simplified Mobile Apps, handles information. The app is free and supported by ads shown through Google AdMob. We do not require an account, and we do not operate a server that receives your data.</p>
+<h2>1. Target audience</h2><p>This app is not directed to children. It is intended for users over 16 years of age.</p>
+<h2>2. Information handled on your device</h2><p>We (the developer) do not collect your personal information. The app does not request access to your contacts, camera, microphone, SMS or social network accounts.</p><ul><li><strong>Name (optional):</strong> You may enter your name so the app can personalize its interface. It is stored only on your device and is not shared with anyone.</li><li><strong>Calculation history and project names:</strong> They are saved in the app's local database on your device. You can delete individual records or the whole history from within the app.</li></ul>
+<h2>3. Location permission (optional)</h2>
+<p>This app offers a feature that uses your device's GPS through Android's native location permission. Before the system permission dialog appears, the app shows a notice explaining why your location is needed.</p>
+<ul>
+<li><strong>Data:</strong> The device location that you allow through the Android permission dialog.</li>
+<li><strong>Purpose:</strong> To estimate the solar radiation and energy available in your geographic area when you run the technical calculations. It is not used for advertising.</li>
+<li><strong>Handling:</strong> Your location is processed on your device, only while you use the app. We do not store it on any server, we do not sell it, and we do not send your GPS coordinates to advertising partners.</li>
+<li><strong>Your control:</strong> Granting the permission is optional. If you decline, features that depend on location are unavailable. You can change your choice at any time in Android Settings &gt; Apps &gt; this app &gt; Permissions.</li>
+</ul>
+<h2>4. Data collected automatically by third-party services</h2>
+<p>This app contains ads served through the <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a> platform, which uses the Google Mobile Ads SDK. According to Google, this SDK automatically collects and shares the following data for advertising, analytics and fraud prevention:</p>
+<ul>
+<li><strong>IP address:</strong> It may be used to estimate the general (approximate) location of your device. This is not your GPS location.</li>
+<li><strong>User product interactions:</strong> For example app launches, taps and video views.</li>
+<li><strong>Diagnostic information:</strong> Information about the performance of the app and the SDK, such as launch time, hang rate and energy usage.</li>
+<li><strong>Device and account identifiers:</strong> The Android advertising ID, the app set ID and, if applicable, other identifiers related to signed-in accounts on the device.</li>
+</ul>
+<p>This data is collected and processed by Google as described in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and the <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a> policy. Data collected by the SDK is encrypted in transit. We do not sell personal data, and we do not use this data for any purpose other than showing ads, measuring them and preventing fraud.</p>
+<h2>5. Google Play and Play Console statistics</h2>
+<p>Google Play and the Google Play Console also collect information from devices, such as installs, crashes, performance and device model. Google collects it under its own privacy policy. As the developer, we only see aggregated statistics and do not receive information that identifies you.</p>
+<h2>6. Advertising choices</h2>
+<p>You can control ads on your device at any time:</p>
+<ul>
+<li>Reset or delete your advertising ID in Android Settings &gt; Privacy &gt; Ads.</li>
+<li>Turn off ad personalization through <a href="https://myadcenter.google.com" target="_blank" rel="noopener">Google My Ad Center</a>.</li>
+<li>Where required by applicable law (for example in the European Economic Area, the United Kingdom and Switzerland), the app asks for your consent before showing personalized ads, and you can change your choice later.</li>
+</ul>
+<h2>7. Security</h2><p>Data transmitted by the advertising and analytics services is encrypted in transit. Data that stays on your device is protected by the Android app sandbox and your device's security settings.</p>
+<h2>8. Data retention and deletion</h2>
+<ul>
+<li><strong>Data on your device:</strong> It is kept until you delete it, clear the app's storage in Android settings, or uninstall the app. Uninstalling removes all local data.</li>
+<li><strong>Data held by Google:</strong> Advertising, analytics and diagnostic data is retained and managed by Google according to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. We do not keep copies of it.</li>
+<li><strong>Requests:</strong> The app does not have user accounts. For any question or request about your data, write to <a href="mailto:simplified.maed@gmail.com">simplified.maed@gmail.com</a>.</li>
+</ul>
+<h2>9. Social networks</h2><p>This app does not interact with, request permissions for, or link to your social network accounts.</p>
+<h2>10. Your rights</h2><p>Depending on where you live, you may have rights to access, correct or delete your personal data and to object to certain processing. Because we do not hold your personal data, most requests are handled through the controls described above and by Google. You can also contact us at <a href="mailto:simplified.maed@gmail.com">simplified.maed@gmail.com</a>.</p>
+<h2>11. Changes to this policy</h2><p>We may update this Privacy Policy when the app or the services it uses change. The date at the top shows the latest version.</p>
+<h2>12. Contact</h2><p>S.M.A. - Simplified Mobile Apps<br><a href="mailto:simplified.maed@gmail.com">simplified.maed@gmail.com</a></p>
+</section>
+<h2 class="part">Terms and Conditions of Use</h2>
+<ul>
+<li>This application provides assistance tools for the calculation of photovoltaic sizing, inverters, electrical consumption and estimation of the solar energy available in the user's area.</li>
+<li>The information provided is based on standard formulas and mathematical estimates for <strong>purely informational and guidance purposes</strong>; it does not replace the design, audit or advice of a qualified technical engineer.</li>
+<li>The use of this application and the interpretation of its results are the total and exclusive responsibility of the user.</li>
+</ul>
+</main>
+<footer>This policy is hosted on GitHub Pages for transparency and access.</footer>
+</div>
 </body>
 </html>
