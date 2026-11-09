@@ -3,72 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLÍTICAS DE PRIVACIDAD - SprinkCalc</title>
+    <title>Política de Privacidad y Términos de Uso - SprinkCalc</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 30px; color: #333; max-width: 900px; margin: auto; background-color: #f9f9f9; }
-        .card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #0056b3; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #333; margin-top: 25px; font-size: 1.3em; }
-        .info-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
-        p, li { margin-bottom: 10px; }
-        strong { color: #000; }
-        hr { border: 0; border-top: 2px solid #eee; margin: 40px 0; }
-    </style>
-    <script>
-        var userLang = navigator.language || navigator.userLanguage; 
-        if (!userLang.startsWith('es')) {
-            window.location.href = "privacidad-imc-corporal-en.html";
+        :root {
+            --primary-color: #d32f2f;
+            --text-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
         }
-    </script>
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            color: var(--text-color);
+            margin-top: 30px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .meta-info {
+            background-color: var(--bg-color);
+            padding: 15px 20px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .meta-info p {
+            margin: 5px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
-  
 <body>
-    <div class="card">
-        <h1>POLÍTICAS DE PRIVACIDAD</h1>
-        <div class="info-box">
-            <p><strong>App:</strong> SprinkCalc</p>
-            <p><strong>Fecha de creación:</strong> 05 de junio, 2026</p>
-            <p><strong>Última actualización:</strong> 05 de junio, 2026</p>
-            <p><strong>Creador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
-            <p><strong>Contacto:</strong> simplified.maed@gmail.com</p>
-            <p><strong>Web:</strong> simplifiedmaed.github.io/</p>
-        </div>
 
-        <h2>1. Prácticas de seguridad</h2>
-        <p>Todos los datos recopilados o procesados por esta aplicación se cifran mediante protocolos seguros (como HTTPS) durante su transmisión y uso. No vendemos ni compartimos información personal o de salud con terceros para fines ajenos al funcionamiento de la publicidad integrada.</p>
-
-        <h2>2. Tipos de datos que recopila esta aplicación</h2>
-        <p>En cumplimiento con las políticas de Google Play, declaramos la recopilación y uso de los siguientes datos:</p>
-        <ul>
-            <li><strong>2.1. Información Personal:</strong> Recopilamos el <strong>nombre</strong> del usuario únicamente con fines de personalización de la interfaz. Este dato no se comparte con terceros.</li>
-            <li><strong>2.2. Ubicación aproximada:</strong> Se utiliza exclusivamente para fines de <strong>publicidad o marketing</strong> a través de proveedores externos como Google AdMob.</li>
-            <li><strong>2.3. Información de rendimiento:</strong> Recopilamos <strong>registros de fallas y diagnósticos</strong> de forma anónima para generar estadísticas y mejorar la estabilidad de la app.</li>
-            <li><strong>2.4. Dispositivo u otros IDs:</strong> Se recopilan identificadores técnicos para fines de <strong>publicidad, marketing y prevención de fraudes</strong>. Estos IDs se comparten con el SDK de Google AdMob.</li>
-        </ul>
-
-        <h2>3. Métodos de procesamiento</h2>
-        <p>El procesamiento de metadatos técnicos y publicitarios se realiza a través de terceros (Google SDKs). Los cálculos de SprinkCalc se ejecutan de forma local en el hardware del dispositivo del usuario para garantizar la máxima privacidad.</p>
-
-        <h2>4. Retención de datos</h2>
-        <p><strong>Datos locales:</strong> El historial de cálculos y el nombre del proyecto de usuario se conservan de forma indefinida en la base de datos local del dispositivo mientras la aplicación esté instalada.</p>
-        <p><strong>Datos de terceros:</strong> Los datos analíticos y de publicidad se retienen según las políticas de privacidad de <strong>Google AdMob</strong> y <strong>Firebase</strong>.</p>
-
-        <h2>5. Eliminación de datos y Derechos del usuario</h2>
-        <p>El usuario puede gestionar su información de la siguiente manera:</p>
-        <ul>
-            <li><strong>Eliminación manual:</strong> El usuario puede borrar registros individuales o el historial completo desde la configuración de la app.</li>
-            <li><strong>Eliminación total:</strong> Al desinstalar la app o borrar el almacenamiento en los ajustes de Android, todos los datos locales se eliminan permanentemente.</li>
-            <li><strong>Solicitudes:</strong> Para cualquier consulta, escriba a <strong>simplified.maed@gmail.com</strong>.</li>
-        </ul>
-
-        <hr>
-
-        <h1>Términos y Condiciones</h1>
-        <ul>
-            <li>Esta aplicación proporciona el cálculo hidráulico para sistemas de rociadores según NFPA-13</li>
-            <li>La información proporcionada es <strong>solo para fines informativos</strong> y no sustituye el consejo profesional técnico.</li>
-            <li>El uso de esta aplicación es bajo su propia responsabilidad.</li>
-        </ul>
+<div class="container">
+    <h1>POLÍTICA DE PRIVACIDAD Y TÉRMINOS DE USO</h1>
+    
+    <div class="meta-info">
+        <p><strong>Aplicación:</strong> SprinkCalc</p>
+        <p><strong>Fecha de creación:</strong> 05 de junio, 2026</p>
+        <p><strong>Última actualización:</strong> 05 de junio, 2026</p>
+        <p><strong>Desarrollador:</strong> S.M.A. - Aplicaciones Móviles Simplificadas</p>
+        <p><strong>Contacto:</strong> <a href="mailto:simplified.maed@gmail.com">simplified.maed@gmail.com</a></p>
+        <p><strong>Sitio Web:</strong> <a href="https://simplifiedmaed.github.io/" target="_blank" rel="noopener">https://simplifiedmaed.github.io/</a></p>
     </div>
+
+    <h2>1. Prácticas de seguridad y cifrado</h2>
+    <p>Todos los datos transmitidos por esta aplicación hacia servicios de terceros se cifran mediante protocolos seguros (HTTPS). No vendemos ni comerciamos con información personal o técnica de nuestros usuarios.</p>
+
+    <h2>2. Tipos de datos recopilados y su uso</h2>
+    <p>En cumplimiento con las políticas de Google Play, declaramos los siguientes datos y sus finalidades:</p>
+    <ul>
+        <li><strong>2.1. Información ingresada por el usuario:</strong> Los nombres de proyectos, clientes o datos de cálculo introducidos en la aplicación se almacenan de manera 100% local en el dispositivo para fines de personalización de reportes e interfaz. Esta información no se transmite a servidores externos ni se comparte con terceros.</li>
+        <li><strong>2.2. Ubicación aproximada:</strong> Procesada exclusivamente por SDKs de terceros (Google AdMob) con fines de publicidad contextual y prevención de fraude.</li>
+        <li><strong>2.3. Información de rendimiento y diagnósticos:</strong> Se recopilan registros anónimos de fallos (crash logs) y métricas de rendimiento para identificar errores técnicos y mejorar la estabilidad de la aplicación.</li>
+        <li><strong>2.4. Identificadores del dispositivo (Device IDs):</strong> Se recopilan identificadores técnicos (como el ID de publicidad de Android) para la gestión de anuncios, analítica y seguridad contra tráfico no válido a través del SDK de Google AdMob.</li>
+    </ul>
+
+    <h2>3. Métodos de procesamiento</h2>
+    <p>Los cálculos hidráulicos de diseño (pérdidas de carga por Hazen-Williams, presiones y caudales) se ejecutan <strong>exclusivamente de forma local</strong> en el hardware del dispositivo. El procesamiento de metadatos publicitarios y de diagnóstico se realiza mediante los SDKs oficiales de Google.</p>
+
+    <h2>4. Retención de datos</h2>
+    <ul>
+        <li><strong>Datos locales:</strong> El historial de cálculos, proyectos guardados y configuraciones se conservan en la base de datos local del dispositivo de forma indefinida mientras la aplicación permanezca instalada.</li>
+        <li><strong>Datos de terceros:</strong> La retención de datos analíticos y publicitarios se rige por las políticas de privacidad de Google AdMob y Google Firebase.</li>
+    </ul>
+
+    <h2>5. Eliminación de datos y derechos del usuario</h2>
+    <ul>
+        <li><strong>Borrado manual:</strong> El usuario puede eliminar cálculos o proyectos individuales desde las opciones de la aplicación.</li>
+        <li><strong>Borrado total:</strong> Al desinstalar la aplicación o limpiar los datos/caché desde los ajustes de Android, toda la información local se elimina de manera permanente e irreversible.</li>
+    </ul>
+
+    <hr>
+
+    <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
+    <ol>
+        <li><strong>Propósito informativo:</strong> SprinkCalc es una herramienta auxiliar para la estimación de cálculos hidráulicos en sistemas de protección contra incendios bajo los criterios de la norma NFPA 13.</li>
+        <li><strong>Responsabilidad profesional:</strong> La información y los resultados generados por esta aplicación no sustituyen la revisión, firma ni el criterio técnico de un ingeniero especialista debidamente colegiado o certificado.</li>
+        <li><strong>Exención de responsabilidad:</strong> El uso de esta aplicación se realiza bajo la exclusiva responsabilidad del usuario. El desarrollador no se hace responsable por errores de entrada de datos, interpretaciones normativas incorrectas, fallas en la ejecución de proyectos ni por daños directos o indirectos derivados del uso de los resultados provistos por la app.</li>
+    </ol>
+</div>
+
 </body>
 </html>
